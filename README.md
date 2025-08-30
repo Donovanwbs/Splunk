@@ -90,6 +90,18 @@ This project highlights my experience using **Splunk Enterprise** with various d
 <img width="955" height="473" alt="image" src="https://github.com/user-attachments/assets/ba27f29b-b1c3-4114-b89f-ecce61c35a25" />
 
 
+---------------------------------------------------------------------------------------------------------------
 
 
-    
+## **HTTP Log Analysis**
+
+1. **Created New Fields**
+- extracting fields from with in the data to make parsing through the data easier and more precise
+- Specified the source and destination ip addresses. 
+     
+<img width="950" height="464" alt="image" src="https://github.com/user-attachments/assets/0a1da51e-a824-4af7-8444-eba8590b4472" />
+
+2. **Created Table**
+ ```spl
+     index=* sourcetype="dnslogs" | table src_ip, dst_ip
+
